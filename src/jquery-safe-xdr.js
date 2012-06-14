@@ -1,3 +1,5 @@
+// Plugin JQuery para request cross domains compativel com JQuery 1.4.2 e IE 8.
+// see: http://ngit.globoi.com/globo-ab/jquery-safe-xdr
 (function ($, window) {
 
   $.safeXDR = function (url, parameters, complete) {
