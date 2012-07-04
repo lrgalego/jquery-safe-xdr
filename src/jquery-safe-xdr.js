@@ -39,7 +39,7 @@
       type: 'GET',
       data: parameters,
       cache: false,
-      timeout: 500,
+      timeout: 5000,
       success: function (response) {
         complete(response);
       },
