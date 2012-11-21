@@ -11,7 +11,9 @@
   }
 
  function getByImage (url, parameters) {
-    parameters.nocache = new Date().getTime();
+    if(parameters.cache !== true){
+      parameters.nocache = new Date().getTime();
+    }
     var imageSrc = url + "?" + $.param(parameters);
     var image = new Image();
 

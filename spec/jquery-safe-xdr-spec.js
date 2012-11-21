@@ -5,11 +5,18 @@ describe("jquery safe xdr", function () {
   });
 
   describe("when not passed a callback", function () {
-    it("should use an image", function () {
-      var imageMock = {};
+    var imageMock;
+    beforeEach(function() {
+      imageMock = {};
       spyOn(window, "Image").andReturn(imageMock);
+    });
+    it("should use an image", function () {
       $.safeXDR("http://domain", {param1: "first", param2: "second"});
       expect(imageMock.src).toEqual("http://domain?param1=first&param2=second&nocache=1234");
+    });
+    it("should cache if I set it to true", function(){
+      $.safeXDR("http://domain", {param1: "first", param2: "second",cache: true});
+      expect(imageMock.src).toEqual("http://domain?param1=first&param2=second&cache=true");
     });
   });
 
@@ -114,7 +121,7 @@ describe("jquery safe xdr", function () {
         expect(ajaxCallParameters.data).toEqual(parameters);
         expect(ajaxCallParameters.type).toEqual("GET");
         expect(ajaxCallParameters.cache).toEqual(false);
-        expect(ajaxCallParameters.timeout).toEqual(500);
+        expect(ajaxCallParameters.timeout).toEqual(5000);
       });
 
       it("should invoke the callback with a valid text response when sucessfull", function() {
