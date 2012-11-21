@@ -8,15 +8,15 @@ To receive some response for this calls, you have to add the Access-Control-Allo
 
 1. Submitting a request
 
-	$.safeXDR('http://sampleurl', {param1:'value1'});
+    $.safeXDR('http://sampleurl', {param1:'value1'});
 
 2. Enable cache
 
-	$.safeXDR('http://sampleurl', {param1:'value1', cache:true});
+    $.safeXDR('http://sampleurl', {param1:'value1', cache:true});
 
 3. Receiving response (Needs Access-Control-Allow-Origin):
 
-	$.safeXDR('http://sampleurl', {param1:'value1'}, function(result){
-		console.log(result);
-	});
+    $.safeXDR('http://sampleurl', {param1:'value1'}, function(result){
+        console.log(result);
+    });
 
