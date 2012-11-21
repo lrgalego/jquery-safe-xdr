@@ -2,6 +2,7 @@
 
 
 jQuery plugin to make Cross Domain Requests with JavaScript without jsonp.
+
 To receive some response for this calls, you have to add the {Access-Control-Allow-Origin}[http://www.w3.org/TR/cors/] HTTP header.
 
 == Samples
