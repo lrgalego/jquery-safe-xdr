@@ -36,11 +36,12 @@
   }
 
   function getByAjax (url, parameters, complete) {
+    var cache = parameters.cache === true;
     $.ajax({
       url: url,
       type: 'GET',
       data: parameters,
-      cache: false,
+      cache: cache,
       timeout: 5000,
       success: function (response) {
         complete(response);
