@@ -1,0 +1,36 @@
+{
+    "name": "safexdr",
+    "title": "jQuery safe xdr",
+    "description": "jQuery plugin to make Cross Domain Requests with JavaScript without jsonp. To receive some response for this calls, you have to add the Access-Control-Allow-Origin HTTP header.",
+    "keywords": [
+        "xdr",
+        "ajax",
+        "jsonp"
+    ],
+    "version": "0.1.0",
+    "author": {
+        "name": "Lucas Rosa Galego",
+        "email": "lrgalego@gmail.com",
+        "url": "https://github.com/lrgalego"
+    },
+    "maintainers": [
+        {
+            "name": "Lucas Rosa Galego",
+            "email": "lrgalego@gmail.com",
+            "url": "http://lucasgalego.com"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://www.opensource.org/licenses/MIT"
+        }
+    ],
+    "bugs": "https://github.com/lrgalego/jquery-safe-xdr/issues",
+    "homepage": "https://github.com/lrgalego/jquery-safe-xdr",
+    "docs": "https://github.com/lrgalego/jquery-safe-xdr",
+    "download": "https://github.com/lrgalego/jquery-safe-xdr",
+    "dependencies": {
+        "jquery": ">=1.6"
+    }
+}
